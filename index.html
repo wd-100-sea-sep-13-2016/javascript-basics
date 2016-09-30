@@ -18,10 +18,10 @@
   	  var students = ["Jesse", "Eli", "Coty", "Taylor"];
 
       notify(instructor);
-      notify(students[0]);
-      notify(students[1]);
-      notify(students[2]);
-      notify(students[3]);
+
+      for (var i = 0; i < students.length; i++) {
+      	notify(students[i]);
+      }
   	</script>
   </body>
 </html>
