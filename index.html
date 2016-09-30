@@ -8,56 +8,20 @@
   </head>
   <body>
   	<script>
-  	  function notify(person) {
-  	  	var fullName;
-
-  	  	if (person.type === "Instructor") {
-  	  		fullName = "Instructor: ";
-  	  	} else {
-  	  		fullName = "Student: ";
-  	  	}
-
-  	  	fullName += person.firstName + " " + person.lastName;
-
-  	  	console.log(fullName);
-  	  	alert(fullName);
+  	  function notify(firstName) {
+  	  	console.log(firstName);
+  	  	alert(firstName);
   	  }
 
-  	  var instructor = {
-  	  	firstName: "Chris",
-  	  	lastName: "Baek",
-  	  	type: "Instructor"
-  	  };
+  	  var instructor = "Chris";
 
-  	  var student1 = {
-  	  	firstName: "Jesse",
-  	  	lastName: "Broadfoot",
-  	  	type: "Student"
-  	  };
-
-  	  var student2 = {
-  	  	firstName: "Eli",
-  	  	lastName: "Broadfoot",
-  	  	type: "Student"
-  	  };
-
-  	  var student3 = {
-  	  	firstName: "Taylor",
-  	  	lastName: "Gibson",
-  	  	type: "Student"
-  	  };
-
-  	  var student4 = {
-  	  	firstName: "Coty",
-  	  	lastName: "Markham",
-  	  	type: "Student"
-  	  };
+  	  var students = ["Jesse", "Eli", "Coty", "Taylor"];
 
       notify(instructor);
-      notify(student1);
-      notify(student2);
-      notify(student3);
-      notify(student4);
+      notify(students[0]);
+      notify(students[1]);
+      notify(students[2]);
+      notify(students[3]);
   	</script>
   </body>
 </html>
