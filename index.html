@@ -9,7 +9,15 @@
   <body>
   	<script>
   	  function notify(person) {
-  	  	var fullName = person.firstName + " " + person.lastName;
+  	  	var fullName;
+
+  	  	if (person.type === "Instructor") {
+  	  		fullName = "Instructor: ";
+  	  	} else {
+  	  		fullName = "Student: ";
+  	  	}
+
+  	  	fullName += person.firstName + " " + person.lastName;
 
   	  	console.log(fullName);
   	  	alert(fullName);
@@ -17,12 +25,14 @@
 
   	  var instructor = {
   	  	firstName: "Chris",
-  	  	lastName: "Baek"
+  	  	lastName: "Baek",
+  	  	type: "Instructor"
   	  };
 
   	  var student = {
   	  	firstName: "Jesse",
-  	  	lastName: "Broadfoot"
+  	  	lastName: "Broadfoot",
+  	  	type: "Student"
   	  };
 
       notify(instructor);
