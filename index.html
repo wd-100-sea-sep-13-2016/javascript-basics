@@ -8,20 +8,25 @@
   </head>
   <body>
   	<script>
-  	  function notify(firstName, lastName) {
-  	  	var fullName = firstName + " " + lastName;
+  	  function notify(person) {
+  	  	var fullName = person.firstName + " " + person.lastName;
 
   	  	console.log(fullName);
   	  	alert(fullName);
   	  }
 
-  	  var instructor = "Chris";
-  	  var instructorLastName = "Baek";
-  	  var student = "Jesse";
-  	  var studentLastName = "Broadfoot";
+  	  var instructor = {
+  	  	firstName: "Chris",
+  	  	lastName: "Baek"
+  	  };
 
-      notify(instructor, instructorLastName);
-      notify(student, studentLastName);
+  	  var student = {
+  	  	firstName: "Jesse",
+  	  	lastName: "Broadfoot"
+  	  };
+
+      notify(instructor);
+      notify(student);
   	</script>
   </body>
 </html>
